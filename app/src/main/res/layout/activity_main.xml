@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- 운동 종류 선택 -->
+    <Spinner
+        android:id="@+id/spinnerExerciseType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Select Exercise Type" />
+
+    <!-- 운동 시간 입력 -->
+    <EditText
+        android:id="@+id/editTextDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Enter Duration (minutes)"
+        android:layout_below="@id/spinnerExerciseType"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 기록 저장 버튼 -->
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Record"
+        android:layout_below="@id/editTextDuration"
+        android:layout_alignParentEnd="true" />
+
+    <!-- 기록 표시 RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecords"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonSave"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>
